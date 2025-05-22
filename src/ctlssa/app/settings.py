@@ -27,7 +27,7 @@ SECRET_KEY: str = os.environ.get("SECRET_KEY", "_dzlo^9d#ox6!7c9rju@=u8+4^sprqoc
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 CTLSSA_HOSTNAMES = os.environ.get("CTLSSA_HOSTNAMES", "localhost")
-ALLOWED_HOSTS = os.environ.get("CTLSSA_ALLOWED_HOSTS", f"{CTLSSA_HOSTNAMES},127.0.0.1").split(",")
+ALLOWED_HOSTS = os.environ.get("CTLSSA_ALLOWED_HOSTS", f"*,{CTLSSA_HOSTNAMES},127.0.0.1").split(",")
 
 
 # Application definition

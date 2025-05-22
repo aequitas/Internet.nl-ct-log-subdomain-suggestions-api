@@ -74,10 +74,12 @@ services:
 
   certstream:
     build:
+      platforms:
+        - linux/amd64
       context: vendor/certstream
     image: ghcr.io/internetstandards/certstream:latest
     environment:
-      LOG_LEVEL: error
+      LOG_LEVEL: info
     restart: always
     healthcheck:
       test: wget -q 127.0.0.1:4000 -O /dev/null
